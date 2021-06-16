@@ -36,6 +36,7 @@ public class FirstRatingsTest {
     public void tearDown() {
     }
     
+
     @Test
     public void testLoadMovies() {
     // System.out.println("Working Directory = " + System.getProperty("user.dir"));
@@ -84,6 +85,7 @@ public class FirstRatingsTest {
     }
     
     
+
     @Test
     public void testLoadRaters() {
         List<Rater> raters = firstRatings.loadRaters("data/ratings.csv");
@@ -128,6 +130,12 @@ public class FirstRatingsTest {
                             .distinct()
                             .count();
         System.out.println("Number of distinct movies rated = " + numDistinctMovies);
+    }
+    
+    @Test
+    public void testJavaVersion() {
+        System.out.println("Java version = " + System.getProperty("java.version"));
+        System.out.println(System.getProperty("java.specification.version"));
     }
 
 }
